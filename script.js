@@ -144,16 +144,7 @@ function logout(){
 }
 
 
-//to display welcome username
-window.onload = function () {
-    let username = localStorage.getItem('loggedInUser');
-    if (username) {
-        document.getElementById('username').textContent = username;
-    } else {
-        alert('You are not logged in.');
-        window.location = './login.html';  // Redirect to login page if not logged in
-    }
-};
+
 
 
 
