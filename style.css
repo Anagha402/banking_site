@@ -31,12 +31,7 @@ nav ul li a{
     font-weight: 900;
     
 }
-nav ul li a:hover{
-    
-    text-shadow: 2px 2px 4px white;
-    color: aqua;
-    
-}
+
 /* home */
 #home{
     
