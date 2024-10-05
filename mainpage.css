@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+body{
+     min-height: 100vh;
+    min-width: 100vw; 
+    overflow-x: hidden;
+}
+#main{
+    background-image: url("./images/GREEN.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650PX;
+}
+
+#deposit,#withdraw{
+    
+    backdrop-filter: blur(2px);  
+    /* for creating glass like effect backdrop filter is used */
+     background-color: rgba(255, 255, 255, 0.4);  
+     
+    
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    box-shadow:6px 6px 6px 6px rgb(0,0,0,0.089);  
+    /* box-shadow: 0px 0px 10px 10px white; */
+}
+#deposit h1{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+#withdraw h1{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
