@@ -50,8 +50,7 @@ function login(){
         
         let userobject=JSON.parse(localStorage.getItem(acn))
          if(psw===userobject.Password){
-             // Store the logged-in username in localStorage for later use
-             localStorage.setItem('loggedInUser', userobject.Name);
+             
 
             alert("Login successful")
             window.location="./mainpage.html"
