@@ -21,7 +21,9 @@ function register(){
         Balance: 0
     };
     //check if user already exist in local storage or not
-    if(userobject.Accountno in localStorage || userobject.Password in localStorage){
+    // Retrieve existing user object by Accountno
+    
+    if(userobject.Accountno in localStorage){
         alert("Account already exist")
     }//check for empty fields
     else if(userobject.Name == '' || userobject.Accountno == '' || userobject.Password == ''){
@@ -48,7 +50,7 @@ function login(){
 
     if(acn in localStorage){//checked if the unique key Accountno is already present in local storage
         
-        let userobject=JSON.parse(localStorage.getItem(acn))
+        let userobject=JSON.parse(localStorage.getItem(acn))//since acn is already there in local storage and is given as unique key
          if(psw===userobject.Password){
              
 
@@ -93,7 +95,7 @@ function deposit(){
             localStorage.setItem(AcNo, JSON.stringify(userobject));  // Update localStorage //to get updated value of each account
             alert("Amount added successfully")
             
-            dep_balance.innerHTML=`<p style="color: brown;font-size:30px;font-weight:900"">Your current balance is ${userobject.Balance}</p>`
+            dep_balance.innerHTML=`<p style="color: brown;font-size:30px;font-weight:900"">Your current balance is &#8377;${userobject.Balance}</p>`
 
         }
 
@@ -122,7 +124,7 @@ function withdraw(){
             alert("Withdrawal amount:" +amountWithdraw)
             userobject.Balance-=amountWithdraw;
             localStorage.setItem(accWd,JSON.stringify(userobject));//update local storage
-            wd_balance.innerHTML=`<p style="color: brown;font-size:30px;font-weight:900">Your current balance is ${userobject.Balance}</p>`
+            wd_balance.innerHTML=`<p style="color: brown;font-size:30px;font-weight:900">Your current balance is &#8377;${userobject.Balance}</p>`
         }
 
     }else if(accWd === ""){
